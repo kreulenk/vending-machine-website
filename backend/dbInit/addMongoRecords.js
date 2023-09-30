@@ -1,28 +1,33 @@
 const { MongoClient } = require('mongodb');
 const fs = require('fs');
 const path = require('path');
+require('dotenv').config();
+
+// Environment variables
+const mongoHost = process.env.MONGO_HOST || 'localhost';
+const mongoPort = process.env.MONGO_PORT || 27017;
 
 // Connection URL
-const url = 'mongodb://localhost:27017';
+const url = `mongodb://${mongoHost}:${mongoPort}`;
 const client = new MongoClient(url);
 
 // Database Name
 const dbName = 'vendingMachine';
-const collectionName = 'sodas';
+const sodaCollectionName = 'sodas';
 
 // Document Directory Info
-const sodaDocsLocation = path.join(__dirname, 'sodaDocuments/');
+const sodaDocsLocation = path.join(__dirname, 'sodas/');
 
 async function main() {
   try {
     await client.connect();
-    console.log('Connected successfully to server');
+    console.log('Successfully connected to the mongo server');
   } catch(error) {
     console.log('There was an error while connecting to the mongo server', error);
   }
 
   const db = client.db(dbName);
-  const sodaCollection = db.collection(collectionName);
+  const sodaCollection = db.collection(sodaCollectionName);
 
   // Drop the soda collection
   sodaCollection.drop();

@@ -5,7 +5,10 @@ const customerController = require('../controllers/customerController');
   
 const router = Router();
   
-// Requests 
+// Soda routes
 router.get('/sodas', customerController.getSodaInventory);
+
+// User routes
+router.post('/login', customerController.loginUser);
   
 module.exports = router;
