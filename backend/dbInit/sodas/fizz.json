@@ -1,0 +1,7 @@
+{
+    "productName": "Fizz",
+    "description": "An effervescent fruity experience with hints of grape and or coriander.",
+    "cost": 1,
+    "maximumQuantity": 100,
+    "currentQuantity": 40
+}

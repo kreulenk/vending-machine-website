@@ -1,0 +1,7 @@
+{
+    "productName": "Pop",
+    "description": "An explosion of flavor that will knock your socks off!",
+    "cost": 1,
+    "maximumQuantity": 100,
+    "currentQuantity": 60
+}
