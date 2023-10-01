@@ -1,0 +1,48 @@
+#title-message {
+    font-size: 72px;
+}
+
+#description-message {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+
+#login-page-centered-items {
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#text-info {
+    text-align: center;
+    margin-top: 300px;
+
+}
+
+#login-fields {
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    width: 600px;
+}
+
+#username-field-contents {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+input {
+    text-align: center;
+}
+
+mat-label {
+    position: relative;
+    text-align: center;
+    display: block;
+}
+
+#registration-info {
+    text-align: center;
+}

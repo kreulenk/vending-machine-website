@@ -1,0 +1,17 @@
+<div id="login-page-centered-items">
+    <div id="text-info">
+      <h1 id="title-message">Vending Machine</h1>
+      <p id="description-message">Welcome to the virtual vending machine!</p>
+    </div>
+    <div id="login-fields">
+      <mat-form-field>
+          <div id="username-field-contents">
+            <mat-label>Username</mat-label>
+            <input matInput type="string" [(ngModel)]="username" (keyup.enter)="onLoginSubmission()">
+          </div>
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="onLoginSubmission()">Submit</button>
+    </div>
+  </div>
+  
+  

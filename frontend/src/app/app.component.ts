@@ -1,18 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { ApiService } from './api.service';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
-export class AppComponent implements OnInit {
-  title = 'frontEnd';
-  message: any;
-  constructor(private apiService: ApiService) { };
-  ngOnInit() {
-      this.apiService.getMessage().subscribe(data => {
-          this.message = data;
-      });
-  }
+export class AppComponent {
+
 }
