@@ -115,14 +115,14 @@ const purchaseSoda = (async (req, res) => {
  * If a user already exists, that user will be returned.
  * If a user is new, they will be entered into the db and then returned
  * 
- * Takes in username as a request body parameter
+ * Takes in username as a request query parameter
  */
-const getUser = (async(req, res) => {
+const login = (async(req, res) => {
 	const name = req.body?.name;
 
 	if (!name) {
 		res.status(400);
-		res.send('You need to include a username.');
+		res.send('You need to include a name for the user.');
 		return;
 	}
 
@@ -156,4 +156,4 @@ const getUser = (async(req, res) => {
 });
 
 // Export of all methods as object
-module.exports = { getSodaInventory, getUser, purchaseSoda }
+module.exports = { getSodaInventory, login, purchaseSoda }

@@ -10,6 +10,6 @@ router.get('/sodas', customerController.getSodaInventory);
 router.put('/sodas', customerController.purchaseSoda)
 
 // User routes
-router.post('/get-user', customerController.getUser);
+router.post('/login', customerController.login);
   
 module.exports = router;

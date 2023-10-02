@@ -7,7 +7,7 @@
       <mat-form-field>
           <div id="username-field-contents">
             <mat-label>Your Name</mat-label>
-            <input matInput type="string" [(ngModel)]="username" (keyup.enter)="onNameSubmission()">
+            <input matInput type="string" [(ngModel)]="name" (keyup.enter)="onNameSubmission()">
           </div>
       </mat-form-field>
       <button mat-raised-button color="primary" (click)="onNameSubmission()">Submit</button>

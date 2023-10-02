@@ -23,7 +23,7 @@ export class ApiService {
 		return this.http.put(expressServer + '/api/customer/sodas', putObject);
 	}
 
-	getUser(name: string) {
-		return this.http.post(expressServer + '/api/customer/get-user', { name });
+	login(name: string) {
+		return this.http.post(expressServer + '/api/customer/login', { name });
 	}
 }

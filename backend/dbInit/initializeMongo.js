@@ -13,7 +13,8 @@ const client = new MongoClient(url);
 
 // Database Name
 const dbName = 'vendingMachine';
-const sodaCollectionName = 'sodas';
+const sodasCollectionName = 'sodas';
+const usersCollectionName = 'users';
 
 // Document Directory Info
 const sodaDocsLocation = path.join(__dirname, 'sodas/');
@@ -24,13 +25,26 @@ async function main() {
     console.log('Successfully connected to the mongo server');
   } catch(error) {
     console.log('There was an error while connecting to the mongo server', error);
+    return;
   }
 
   const db = client.db(dbName);
-  const sodaCollection = db.collection(sodaCollectionName);
+  const sodasCollection = db.collection(sodasCollectionName);
+  const usersCollection = db.collection(usersCollectionName);
 
-  // Drop the soda collection
-  sodaCollection.drop();
+  // Drop the collections safely
+  try {
+    await sodasCollection.drop();
+   } catch (error) {
+    console.log('Unable to drop sodas collection as it likely does not exist yet. Likely no issue present.')
+  }
+
+  try {
+    await usersCollection.drop();
+   } catch (error) {
+    console.log('Unable to drop users collection as it likely does not exist yet. Likely no issue present.')
+  }
+
 
   const sodaFileNameList = fs.readdirSync(sodaDocsLocation);
   const sodaDocContents = [];
@@ -43,9 +57,10 @@ async function main() {
 
   // Push all files to mongo
   try {
-    await sodaCollection.insertMany(sodaDocContents);
+    await sodasCollection.insertMany(sodaDocContents);
   } catch (error) {
     console.log('There was an error while inserting the documents into mongo', error);
+    return;
   }
 
   return 'Initialization Script Complete';

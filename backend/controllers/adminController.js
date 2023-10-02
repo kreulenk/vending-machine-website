@@ -24,16 +24,23 @@ const updateSodaCost = (async (req, res) => {
 		return;
 	}
 
-	let newSodaRecod;
+	let sodaToUpdate;
 	try {
-        newSodaRecod = await sodaCollection.findOneAndUpdate({ _id: new ObjectId(sodaId) }, { $set: { cost: newCost }});
+        sodaToUpdate = await sodaCollection.findOneAndUpdate({ _id: new ObjectId(sodaId) }, { $set: { cost: newCost }});
 	} catch(error) {
 		console.log(error);
         res.status(500);
 		res.send('An error occurred while setting the new soda cost.');
 		return;
 	}
-	res.send(newSodaRecod);
+
+	if (!sodaToUpdate) {
+		res.status(400);
+		res.send('The provided sodaId does not exist.');
+		return;
+	}
+
+	res.send({ newCost });
 });
 
 const restockSoda = (async (req, res) => {
@@ -62,6 +69,12 @@ const restockSoda = (async (req, res) => {
 		return;
 	}
 
+	if (!sodaToRestock) {
+		res.status(400);
+		res.send('The provided sodaId does not exist.');
+		return;
+	}
+
 	// If we are attempting to add more sodas than the maximum quantity
 	if (numberToAttemptRestock + sodaToRestock.currentQuantity > sodaToRestock.maximumQuantity) {
 		res.status(400);
@@ -80,7 +93,7 @@ const restockSoda = (async (req, res) => {
 		res.send('An error occurred while updating the soda quantity');
 		return;
 	}
-	res.send(newSodaRecord);
+	res.send({ newQuantity: newQuantity });
 });
 
 

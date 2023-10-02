@@ -10,7 +10,7 @@ import { ApiService } from '../api.service';
 export class GetNamePageComponent implements OnInit {
   constructor(private router: Router, private apiService: ApiService) { }
 
-  username = '';
+  name = '';
 
   ngOnInit(): void {
     // Ensure that we are at the login page
@@ -21,6 +21,6 @@ export class GetNamePageComponent implements OnInit {
   }
 
   onNameSubmission(): void {
-    this.router.navigate(['vending'], { queryParams: { username: this.username }})
+    this.router.navigate(['vending'], { queryParams: { name: this.name }})
   }
 }
