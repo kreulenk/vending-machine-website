@@ -1,0 +1,15 @@
+<div id="get-name-page-centered-items">
+    <div id="text-info">
+      <h1 id="title-message">ColaCo Industries</h1>
+      <p id="description-message">Welcome to the virtual vending machine!</p>
+    </div>
+    <div id="input-fields">
+      <mat-form-field>
+          <div id="username-field-contents">
+            <mat-label>Your Name</mat-label>
+            <input matInput type="string" [(ngModel)]="username" (keyup.enter)="onNameSubmission()">
+          </div>
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="onNameSubmission()">Submit</button>
+    </div>
+  </div>
