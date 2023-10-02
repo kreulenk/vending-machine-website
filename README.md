@@ -1,4 +1,4 @@
-# VendingMachineWebsite
+# ColaCo Vending Machine
 
 Thank you for checking out the ColaCo vending machine!
 
@@ -7,9 +7,9 @@ Thank you for checking out the ColaCo vending machine!
 - Mongodb Community: v6.0 (Untested but VendingMachine should be compatible with earlier versions)
 
 ## Configuring Mongo Database
-1. Ensure that you have at least mongodb community installed. This was developed using mongodb-community@6.0 but should be compatible with earlier versions. https://www.mongodb.com/docs/v7.0/installation/.
-2. Ensure that you do not have authentication enabled on your mongo instance as it is not supported on this application.
-3. Ensure that your mongo is running on host `localhost` and port `27017`. If this is not the case, update the MONGO_HOST and MONGO_PORT values in ./backend/.env.
+1. Ensure that have mongodb community installed.
+2. Ensure that you do not have authentication enabled on your mongodb instance as it is not supported on this application.
+3. Ensure that your mongodb is running on host `localhost` and port `27017`. If your mongo can not run on those values, update the MONGO_HOST and MONGO_PORT values in ./backend/.env.
 4. Navigate to the ./backend directory of this project.
 5. Run `npm install` to install all of the backend dependencies.
 6. Navigate to the ./backend/dbInit and run `node initializeMongo.js`.
@@ -18,13 +18,13 @@ Thank you for checking out the ColaCo vending machine!
 
 ### Backend Express Server
 1. Open a new terminal window.
-2. Navigate to the backend directory of this project.
+2. Navigate to the ./backend directory of this project.
 3. Run `npm install` to install all of the dependencies.
 4. Run node server.js to launch the express server.
 
 ### Frontend Angular Server
 1. Open a new terminal window
-2. Navigate to the frontend directory of this project.
+2. Navigate to the ./frontend directory of this project.
 3. Run `npm install` to install all of the dependencies.
 4. Run `npm run start` to launch the angular development server.
 5. Navigate to `http://localhost:4200/`.

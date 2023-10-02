@@ -45,7 +45,6 @@ async function main() {
     console.log('Unable to drop users collection as it likely does not exist yet. Likely no issue present.')
   }
 
-
   const sodaFileNameList = fs.readdirSync(sodaDocsLocation);
   const sodaDocContents = [];
 
