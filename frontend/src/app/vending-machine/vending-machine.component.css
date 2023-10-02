@@ -1,3 +1,7 @@
+p {
+    margin: 0px;
+}
+
 #vending-machine {
     display: block;
     justify-content: center;
@@ -19,7 +23,7 @@
 }
 
 #branding-text-section {
-    height: 150px;
+    height: 180px;
     font-size: 32pt;
 }
 
@@ -27,24 +31,32 @@
     padding-top: 50px;
 }
 
-#soda-display {
-    height: 600px;
-}
-
 .individual-soda-display {
     display: flex;
     height: 60px;
-    margin: 35px 0px;
-    width: 300px;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    width: 370px;
+    border-style: solid;
+    border-radius: 7px;
 }
 
-.quantity-display-text {
-    margin-left: 30px;
-    display: block;
+.individual-soda-display p {
+    width: 110px;
+    text-align: center;
+    font-size: 16pt;
+    border-style: solid;
+    border-width: 0px 3px 0px 0px;
+    font-weight: 600;
 }
 
-.quantity-display-text p {
-    margin: 0px;
+.soda-icons-container {
+    display: flex;
+}
+
+.soda-icon {
+    margin-left: 3px;
+    position: relative;
 }
 
 #right-side {

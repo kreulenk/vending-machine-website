@@ -46,4 +46,9 @@ export class VendingMachineComponent implements OnInit {
       error: (err: any) => this._snackBar.open(err.error, '', { duration: 5000 })
     })
   }
+
+  // We can only display 4 sodas at a time so this function determines if we should display 4 or less sodas
+  sodasToDisplay(currentQuantity: number): number {
+    return Math.min(currentQuantity, 4);
+  }
 }
