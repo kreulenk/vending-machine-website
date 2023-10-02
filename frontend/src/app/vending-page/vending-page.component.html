@@ -1,4 +1,5 @@
 <div id="bank-balance-text">
-    Bank Balance: ${{ userInfo.bankBalance }}
+    <p>User: {{ username }}</p>
+    <p>Bank Balance: ${{ userInfo.bankBalance }}</p>
 </div>
 <app-vending-machine [userInfo]="userInfo"></app-vending-machine>

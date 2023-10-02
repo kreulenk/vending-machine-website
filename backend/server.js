@@ -15,7 +15,7 @@ const mongoDbConnection = client.db(dbName);
 
 const app = express();
 
-mongoDbConnection.client.connect().then((test) => {
+mongoDbConnection.client.connect().then(() => {
     app.use(express.json());
 
     // handling CORS
@@ -24,12 +24,16 @@ mongoDbConnection.client.connect().then((test) => {
             "http://localhost:4200");
         res.header("Access-Control-Allow-Headers",
             "Origin, X-Requested-With, Content-Type, Accept");
+            res.header("Access-Control-Allow-Methods",
+            "GET, PUT, POST");
         next();
     });
 
     // Routes configurations
     const cusomterRoutes = require('./routes/customerRoutes.js');
-    app.use('/customer', cusomterRoutes);
+    const adminRoutes = require('./routes/adminRoutes.js');
+    app.use('/api/customer', cusomterRoutes);
+    app.use('/api/admin', adminRoutes);
 
     app.listen(expressPort, (error) => {
         if (error) {

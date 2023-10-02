@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from "@angular/material/button";
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { GetNamePageComponent } from './get-name-page/get-name-page.component';
@@ -29,7 +30,8 @@ import { VendingMachineComponent } from './vending-machine/vending-machine.compo
     MatInputModule,
     MatButtonModule,
     MatSnackBarModule,
-    FormsModule
+    MatTooltipModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

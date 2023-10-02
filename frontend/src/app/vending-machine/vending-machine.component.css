@@ -18,18 +18,9 @@
     background-color: #b0e4ff;
 }
 
-#branding-text-section {
-    height: 20%;
-    font-size: 32pt;
-}
-
 #branding-text {
-    vertical-align: middle;
-    padding-top: 10%
-}
-
-#soda-display {
-    height: 80%;
+    padding-top: 10%;
+    font-size: 32pt;
 }
 
 .quantity-display {

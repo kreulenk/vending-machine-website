@@ -1,24 +1,12 @@
 <div>
     <div id="vending-machine">
         <div id="branding-section">
-            <div id="branding-text-section">
-                <div id="branding-text">
-                    ColaCo Refreshments
-                </div>
-            </div>
-            <div id="soda-display">
-                <!-- <div *ngFor="let soda of sodaList; index as i">
-                    <div class="quantity-display left-quantity-display" *ngIf="i % 2 == 0">
-
-                    </div>
-                    <div class="quantity-display right-quantity-display" *ngIf="i % 2 == 1">
-
-                    </div>
-                </div> -->
+            <div id="branding-text">
+                ColaCo Refreshments
             </div>
         </div>
         <div id="button-section">
-            <div class="soda-buttons" *ngFor="let soda of sodaList" (click)="purchaseSoda(soda)">
+            <div class="soda-buttons" *ngFor="let soda of sodaList" (click)="purchaseSoda(soda)" matTooltip={{soda.description}}>
                 <div class="product-name-text">{{ soda.productName }}</div>
                 <div class="product-cost-text">${{ soda.cost }}</div>
             </div>

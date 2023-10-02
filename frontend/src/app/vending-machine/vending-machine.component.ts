@@ -29,7 +29,7 @@ export class VendingMachineComponent implements OnInit {
   getSodas(): void {
     this.apiService.getSodas().subscribe({
       next: (res: any) => this.sodaList = res,
-      error: (err: any) => this._snackBar.open(err.error)
+      error: (err: any) => this._snackBar.open(err.error, '', { duration: 5000 })
     });
   }
 
@@ -43,7 +43,7 @@ export class VendingMachineComponent implements OnInit {
         saveAs(fileBlob, fileName)
       
       },
-      error: (err: any) => this._snackBar.open(err.error)
+      error: (err: any) => this._snackBar.open(err.error, '', { duration: 5000 })
     })
   }
 }
