@@ -41,7 +41,7 @@ export class VendingMachineComponent implements OnInit {
         const fileBlob = new Blob([JSON.stringify(res, null, 4)], { type: "text/plain" });
         const fileName = `${res.productName}_${res.purchaseDate}.json`;
         saveAs(fileBlob, fileName)
-      
+        this.getSodas();
       },
       error: (err: any) => this._snackBar.open(err.error, '', { duration: 5000 })
     })
