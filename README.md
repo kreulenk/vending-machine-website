@@ -3,8 +3,8 @@
 Thank you for checking out the ColaCo vending machine!
 
 ## Prerequisites
-- Nodejs: v18.15.0 (lts/hydrogen)
-- Mongodb Community: v6.0 (Untested but VendingMachine should be compatible with earlier versions)
+- Nodejs: v18.15.0 (Untested but likely compatible with earlier versions)
+- Mongodb Community: v6.0 (Untested but likely compatible with earlier versions)
 
 ## Configuring Mongo Database
 1. Ensure that have mongodb community installed.
