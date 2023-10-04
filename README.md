@@ -32,6 +32,8 @@ Thank you for checking out the ColaCo vending machine!
 ## API Documentation
 If using default settings at ./backend/.env, all APIs will be accessible at `http://localhost:3000`.
 
+A postman collection is also available at `./Vending Machine.postman_collection.json`.
+
 ### User Routes
 
 #### Login

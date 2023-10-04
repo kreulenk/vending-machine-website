@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ApiService } from '../api.service';
 import { User } from '../models/user';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-vending-page',
@@ -9,7 +10,7 @@ import { User } from '../models/user';
   styleUrls: ['./vending-page.component.css']
 })
 export class VendingPageComponent implements OnInit {
-  constructor(private router: Router, private apiService: ApiService, private activatedRoute: ActivatedRoute) { }
+  constructor(private router: Router, private apiService: ApiService, private activatedRoute: ActivatedRoute, private _snackBar: MatSnackBar) { }
 
   name = '';
   userInfo: User = {
@@ -30,7 +31,7 @@ export class VendingPageComponent implements OnInit {
   login(): void {
     this.apiService.login(this.name).subscribe({
       next: (res: any) => this.userInfo = res,
-      error: () => console.log('error logging in')
+      error: () => this._snackBar.open('There was an error getting your user.', '', { duration: 5000 })
     });
   }
 }
