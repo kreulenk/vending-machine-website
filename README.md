@@ -20,7 +20,7 @@ Thank you for checking out the ColaCo vending machine!
 1. Open a new terminal window.
 2. Navigate to the ./backend directory of this project.
 3. Run `npm install` to install all of the dependencies.
-4. Run node server.js to launch the express server.
+4. Run `node server.js` to launch the express server.
 
 ### Frontend Angular Server
 1. Open a new terminal window
