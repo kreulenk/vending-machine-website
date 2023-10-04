@@ -17,6 +17,7 @@ p {
 #left-side {
     float: left;
     border-right: solid;
+    border-width: 3px;
     height: 100%;
     width: 70%;
     background-color: #90bed6;
