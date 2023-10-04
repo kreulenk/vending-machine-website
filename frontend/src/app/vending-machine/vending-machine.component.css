@@ -19,7 +19,7 @@ p {
     border-right: solid;
     height: 100%;
     width: 70%;
-    background-color: #b0e4ff;
+    background-color: #90bed6;
 }
 
 #branding-text-section {
@@ -39,6 +39,7 @@ p {
     width: 370px;
     border-style: solid;
     border-radius: 7px;
+    background-color: #d1d9dc;
 }
 
 .individual-soda-display p {
@@ -63,7 +64,7 @@ p {
     float: right;
     width: calc(30% - 3px);
     height: 100%;
-    background-color: #85d4ff;
+    background-color: #396f8d;
 }
 
 .soda-buttons {
@@ -72,11 +73,11 @@ p {
     margin: 5px 5px;
     border-style: solid;
     border-radius: 10px;
-    background-color: #d1bfff;
+    background-color: #b3b3b3;
 }
 
 .soda-buttons:hover {
-    background-color: #bea4ff;
+    background-color: #989898;
 }
 
 .product-name-text {

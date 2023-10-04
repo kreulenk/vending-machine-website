@@ -15,9 +15,6 @@ export class GetNamePageComponent implements OnInit {
   ngOnInit(): void {
     // Ensure that we are at the login page
     this.router.navigate(['get-name']);
-    
-    this.apiService.getSodas().subscribe(data => {
-    });
   }
 
   onNameSubmission(): void {
