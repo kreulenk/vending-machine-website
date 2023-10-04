@@ -11,8 +11,7 @@ import { User } from '../models/user';
 export class VendingPageComponent implements OnInit {
   constructor(private router: Router, private apiService: ApiService, private activatedRoute: ActivatedRoute) { }
 
-  name: string = '';
-  sodaList: any = [];
+  name = '';
   userInfo: User = {
     _id: '',
     name: '',
